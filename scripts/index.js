@@ -1,183 +1,5 @@
 const API_KEY = 'AIzaSyCgxagrNYSSNWFSBWgSVAdLv5p8e8XEodE';
 
-const MOCK_DATA = {
-  "kind": "youtube#searchListResponse",
-  "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/agNYxBe38ZmeZDLAJbt3iyqfdS0\"",
-  "nextPageToken": "CAUQAA",
-  "regionCode": "US",
-  "pageInfo": {
-   "totalResults": 1000000,
-   "resultsPerPage": 5
-  },
-  "items": [
-   {
-    "kind": "youtube#searchResult",
-    "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/CIzHxn5Tg3A4s2nJ1YNkNe9bwj8\"",
-    "id": {
-     "kind": "youtube#video",
-     "videoId": "hY7m5jjJ9mM"
-    },
-    "snippet": {
-     "publishedAt": "2017-05-31T09:30:02.000Z",
-     "channelId": "UC9obdDRxQkmn_4YpcBMTYLw",
-     "title": "CATS will make you LAUGH YOUR HEAD OFF - Funny CAT compilation",
-     "description": "Cats are amazing creatures because they make us laugh all the time! Watching funny cats is the hardest try not to laugh challenge! Just look how all these cats ...",
-     "thumbnails": {
-      "default": {
-       "url": "https://i.ytimg.com/vi/hY7m5jjJ9mM/default.jpg",
-       "width": 120,
-       "height": 90
-      },
-      "medium": {
-       "url": "https://i.ytimg.com/vi/hY7m5jjJ9mM/mqdefault.jpg",
-       "width": 320,
-       "height": 180
-      },
-      "high": {
-       "url": "https://i.ytimg.com/vi/hY7m5jjJ9mM/hqdefault.jpg",
-       "width": 480,
-       "height": 360
-      }
-     },
-     "channelTitle": "Tiger FunnyWorks",
-     "liveBroadcastContent": "none"
-    }
-   },
-   {
-    "kind": "youtube#searchResult",
-    "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/Xv0f71hRivXbOFeZ14SKHWY1IJs\"",
-    "id": {
-     "kind": "youtube#video",
-     "videoId": "EtH9Yllzjcc"
-    },
-    "snippet": {
-     "publishedAt": "2017-11-18T21:00:00.000Z",
-     "channelId": "UC3rrzHpFzshYjIMk8YFc52w",
-     "title": "Try Not To Laugh Challenge - Funny Cat & Dog Vines compilation 2017",
-     "description": "Try Not To Laugh or Grin While Watching Funny Dogs & Cats Vines compilation 2017 IMPOSSIBLE CHALLENGE! Subscribe to CooL Vines ...",
-     "thumbnails": {
-      "default": {
-       "url": "https://i.ytimg.com/vi/EtH9Yllzjcc/default.jpg",
-       "width": 120,
-       "height": 90
-      },
-      "medium": {
-       "url": "https://i.ytimg.com/vi/EtH9Yllzjcc/mqdefault.jpg",
-       "width": 320,
-       "height": 180
-      },
-      "high": {
-       "url": "https://i.ytimg.com/vi/EtH9Yllzjcc/hqdefault.jpg",
-       "width": 480,
-       "height": 360
-      }
-     },
-     "channelTitle": "CooL Vines",
-     "liveBroadcastContent": "none"
-    }
-   },
-   {
-    "kind": "youtube#searchResult",
-    "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/VcTdH3FZoZafsgvhHDqKmj7GqKI\"",
-    "id": {
-     "kind": "youtube#video",
-     "videoId": "LJlYX7PZ9UU"
-    },
-    "snippet": {
-     "publishedAt": "2018-08-28T12:07:31.000Z",
-     "channelId": "UC5m164P4C-4F5bqs28HtI6w",
-     "title": "GIANT Maze Labyrinth for Cat Kittens. Can they EXIT?",
-     "description": "In this video I show you how to make Giant Cardboard Maze Game for your cat or kittens. It's a fun project for you and your pets. If you like the video, share it, like ...",
-     "thumbnails": {
-      "default": {
-       "url": "https://i.ytimg.com/vi/LJlYX7PZ9UU/default.jpg",
-       "width": 120,
-       "height": 90
-      },
-      "medium": {
-       "url": "https://i.ytimg.com/vi/LJlYX7PZ9UU/mqdefault.jpg",
-       "width": 320,
-       "height": 180
-      },
-      "high": {
-       "url": "https://i.ytimg.com/vi/LJlYX7PZ9UU/hqdefault.jpg",
-       "width": 480,
-       "height": 360
-      }
-     },
-     "channelTitle": "EverXFun",
-     "liveBroadcastContent": "none"
-    }
-   },
-   {
-    "kind": "youtube#searchResult",
-    "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/rDd-IbPkFNfqp9EIZmHIGGpldyw\"",
-    "id": {
-     "kind": "youtube#video",
-     "videoId": "kO4wYbkE408"
-    },
-    "snippet": {
-     "publishedAt": "2018-07-29T17:32:26.000Z",
-     "channelId": "UCeL2LSl91k2VccR7XEh5IKg",
-     "title": "LIVE: Hyatt the blind feral cat - TinyKittens.com",
-     "description": "This is Hyatt's story so far: https://youtu.be/kbzQj5CtuiQ Hyatt's roommate is Salia, who is from the same feral colony and is being treated for an ear polyp and ...",
-     "thumbnails": {
-      "default": {
-       "url": "https://i.ytimg.com/vi/kO4wYbkE408/default_live.jpg",
-       "width": 120,
-       "height": 90
-      },
-      "medium": {
-       "url": "https://i.ytimg.com/vi/kO4wYbkE408/mqdefault_live.jpg",
-       "width": 320,
-       "height": 180
-      },
-      "high": {
-       "url": "https://i.ytimg.com/vi/kO4wYbkE408/hqdefault_live.jpg",
-       "width": 480,
-       "height": 360
-      }
-     },
-     "channelTitle": "TinyKittens HQ",
-     "liveBroadcastContent": "live"
-    }
-   },
-   {
-    "kind": "youtube#searchResult",
-    "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/w3Yt8Ap-2nftMsG8ImFVsH_ZZwE\"",
-    "id": {
-     "kind": "youtube#video",
-     "videoId": "oZFAcp-Qfbs"
-    },
-    "snippet": {
-     "publishedAt": "2018-10-24T14:24:19.000Z",
-     "channelId": "UCNo5PGwGmfnEprEUUb9AGgw",
-     "title": "World's Most Obedient Cat",
-     "description": "Prince Michael takes on a few new responsibilities while Aaron's caught under the weather. T-Shirt from video available here: https://shop.aaronsanimals.com/ ...",
-     "thumbnails": {
-      "default": {
-       "url": "https://i.ytimg.com/vi/oZFAcp-Qfbs/default.jpg",
-       "width": 120,
-       "height": 90
-      },
-      "medium": {
-       "url": "https://i.ytimg.com/vi/oZFAcp-Qfbs/mqdefault.jpg",
-       "width": 320,
-       "height": 180
-      },
-      "high": {
-       "url": "https://i.ytimg.com/vi/oZFAcp-Qfbs/hqdefault.jpg",
-       "width": 480,
-       "height": 360
-      }
-     },
-     "channelTitle": "AaronsAnimals",
-     "liveBroadcastContent": "none"
-    }
-   }
-  ]
- };
-
 /*
   We want our store to hold an array of "decorated" video objects - i.e. objects that
   have been transformed into ONLY the necessary data we're displaying on our page. 
@@ -219,7 +41,7 @@ const fetchVideos = function(searchTerm, callback) {
     key: API_KEY,
     part: 'snippet',
   }
-  $.getJSON(BASE_URL, query, (response) => callback(response));
+  $.getJSON(BASE_URL, query, callback);
 };
 
 /**
@@ -238,7 +60,6 @@ const fetchVideos = function(searchTerm, callback) {
 // TEST IT! Grab an example API response and send it into the function - make sure
 // you get back the object you want.
 const decorateResponse = function(response) {
-  console.log(response.items[0])
   return response.items.map(item =>{ 
     return { 
       id: item.id.videoId, 
@@ -247,9 +68,6 @@ const decorateResponse = function(response) {
     }; 
   });
 }
-
-const value = fetchVideos('cats', decorateResponse);
-console.log(value)
 
 /**
  * @function generateVideoItemHtml
@@ -322,12 +140,15 @@ const handleFormSubmit = function(event) {
     const val = $('#search-term').val();
     $('#search-term').val('');
 
-  })
+    fetchVideos(val, (response) => { 
+      const decorated = decorateResponse(response); 
+      addVideosToStore(decorated); 
+      render(); 
+    });
+  });
 };
 
-//console.log('step 11 - all functions and varaibles declared in previous steps')
 // When DOM is ready:
 $(function () {
-  //console.log('step 12 - run handleformsubmit')
   handleFormSubmit();
 });
